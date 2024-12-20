@@ -12,9 +12,6 @@ return {
 
       options = {
         icons_enabled = true,
-        disabled_filetypes = {},
-        component_separators = ' ',
-        section_separators = { left = '', right = '' },
         always_divide_middle = true,
         globalstatus = true,
       },
@@ -26,15 +23,6 @@ return {
         lualine_x = { 'diagnostics', 'diff', 'filetype' },
         lualine_y = { 'location' },
         lualine_z = { 'progress' },
-      },
-
-      inactive_sections = {
-        lualine_a = {},
-        lualine_b = {},
-        lualine_c = { 'filename' },
-        lualine_x = { 'location' },
-        lualine_y = {},
-        lualine_z = {},
       },
 
       tabline = {},
