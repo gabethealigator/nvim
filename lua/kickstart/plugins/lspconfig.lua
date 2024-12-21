@@ -185,6 +185,7 @@ return {
         html = {},
         tailwindcss = {},
         ts_ls = {},
+        marksman = {},
 
         lua_ls = {
           -- cmd = {...},
