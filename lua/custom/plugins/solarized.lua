@@ -1,41 +1,44 @@
 return {
-  'craftzdog/solarized-osaka.nvim',
+  'gabethealigator/lackluster.nvim',
   lazy = false,
   priority = 1000,
-  opts = {
-	  on_highlights = function(hl, c)
-	    local prompt = "#2d3149"
-	    hl.TelescopeNormal = {
-	      bg = c.bg_dark,
-	      fg = c.fg_dark,
-	    }
-	    hl.TelescopeBorder = {
-	      bg = c.bg_dark,
-	      fg = c.bg_dark,
-	    }
-	    hl.TelescopePromptNormal = {
-	      bg = prompt,
-	    }
-	    hl.TelescopePromptBorder = {
-	      bg = prompt,
-	      fg = prompt,
-	    }
-	    hl.TelescopePromptTitle = {
-	      bg = prompt,
-	      fg = prompt,
-	    }
-	    hl.TelescopePreviewTitle = {
-	      bg = c.bg_dark,
-	      fg = c.bg_dark,
-	    }
-	    hl.TelescopeResultsTitle = {
-	      bg = c.bg_dark,
-	      fg = c.bg_dark,
-	    }
-	  end,
-  },
-
+  init = function() vim.opt.termguicolors = true end,
   config = function()
-    vim.cmd [[colorscheme solarized-osaka]]
+    local lackluster = require 'lackluster'
+
+    lackluster.setup {
+      disable_plugin = {
+        bufferline = false,
+        cmp = false,
+        dashboard = false,
+        flash = false,
+        git_gutter = false,
+        git_signs = false,
+        headline = false,
+        indentmini = false,
+        lazy = false,
+        lightbulb = false,
+        lsp_config = false,
+        mason = false,
+        mini_diff = false,
+        navic = false,
+        noice = false,
+        notify = false,
+        oil = false,
+        rainbow_delimiter = false, -- if you want color-rainbows you should disable this
+        scollbar = false,
+        telescope = false,
+        todo_comments = false,
+        tree = false,
+        trouble = false,
+        which_key = false,
+        yanky = false,
+      },
+      tweak_background = {
+        normal = 'none',
+      },
+    }
+
+    vim.cmd [[colorscheme lackluster-mint]]
   end,
 }
