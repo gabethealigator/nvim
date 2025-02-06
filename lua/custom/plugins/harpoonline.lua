@@ -8,11 +8,6 @@ return {
   },
 
   config = function()
-    local colors = {
-      bg = '#121212',
-      fg = '#fff',
-    }
-
     require('lualine').setup {
 
       options = {
@@ -21,13 +16,6 @@ return {
         globalstatus = true,
         component_separators = '',
         section_separators = '',
-        theme = {
-          normal = {
-            a = { fg = colors.fg, bg = colors.bg },
-            b = { fg = colors.fg, bg = colors.bg },
-            c = { fg = colors.fg, bg = colors.bg },
-          },
-        },
       },
 
       sections = {
